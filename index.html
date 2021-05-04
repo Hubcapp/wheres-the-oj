@@ -1,0 +1,215 @@
+<!doctype html>
+<html>
+<head>
+	<style>
+	html, body {
+		background-color: #282828;
+		margin: 0;
+		padding: 0;
+		width: 100%;
+		height: 100%;
+		display: table;
+	}
+	#characterSelectionScreen {
+		display: table-cell;	
+		text-align:center;
+		vertical-align: middle;
+		min-width: 1400px;
+	}
+	h1 {
+		color: orange;
+		font-family: Arial;
+	}
+	.unit, .blank, .ui {
+		display: inline;
+		width: 112px;
+		height: 112px;
+		margin: 12px;
+	}
+	.row {
+		margin-top:-50px;
+	}
+	.noMatch {
+	    opacity: 0.25;
+		filter: alpha(opacity=25); /* msie */
+	}
+	
+	#search {
+		display: block;
+		border: 1px solid #aaa;
+		font-size: 16px;
+		padding: 10px 10px;
+		width: 100%;
+		background: #fff;
+		padding-left: 40px;
+		border-radius: 20px;
+		outline: none !important;
+		box-sizing: border-box;
+	}
+	#searchbox {
+		width: 100%;
+		max-width: 400px;
+		margin: 0 auto;
+		padding-bottom: 20px;
+		position: relative;
+		box-sizing: border-box;
+	}
+	#searchbox .searchIconImage {
+		height: 24px;
+		position: absolute;
+		transform: rotate(8deg);
+		left: 8px;
+		top: 8px;
+	}
+	</style>
+	<link rel="icon" href="oj.jpg">
+	<title>Where's the OJ?</title>
+</head>
+<body>
+<div id="characterSelectionScreen">
+	<h1>Where's my Orange Juice??</h1>
+	<div id="searchbox">
+		<img src="orange.png" class="searchIconImage">
+		<input autocomplete="off" id="search" placeholder="Character Name...">
+	</div>
+	<div class="row0">
+		<div class="blank"><img src="units/blank.png"/></div>
+		<div class="blank"><img src="units/blank.png"/></div>
+		<div class="unit"><img src="units/Kyupita.png" title="Kyupita"/></div>
+		<div class="blank"><img src="units/blank.png"/></div>
+		<div class="unit"><img src="units/Teotoratta.png" title="Teotoratta"/></div>
+		<div class="blank"><img src="units/blank.png"/></div>
+		<div class="unit"><img src="units/Alicianrone.png" title="Alicianrone"/></div>
+		<div class="blank"><img src="units/blank.png"/></div>
+		<div class="unit"><img src="units/Chris.png" title="Chris"/></div>
+		<div class="blank"><img src="units/blank.png"/></div>
+	</div>
+	<div class="row">
+		<div class="blank"><img src="units/blank.png"/></div>
+		<div class="blank"><img src="units/blank.png"/></div>
+		<div class="unit"><img src="units/QP (Dangerous).png" title="QP (Dangerous)"/></div>
+		<div class="unit"><img src="units/Tomato Mimyuu.png" title="Tomato & Mimyuu"/></div>
+		<div class="unit"><img src="units/Ceoreparque.png" title="Ceoreparque"/></div>
+		<div class="unit"><img src="units/Miyusaki.png" title="Miyusaki"/></div>
+		<div class="unit"><img src="units/Yuki (Dangerous).png" title="Yuki (Dangerous)"/></div>
+		<div class="unit"><img src="units/Yuuki.png" title="Yuuki"/></div>
+		<div class="blank"><img src="units/blank.png"/></div>
+	</div>
+	<div class="row">
+		<div class="blank"><img src="units/blank.png"/></div>
+		<div class="blank"><img src="units/blank.png"/></div>
+		<div class="unit"><img src="units/Suguri (Ver.2).png" title="Suguri (Ver.2)"/></div>
+		<div class="unit"><img src="units/QP.png" title="QP"/></div>
+		<div class="unit"><img src="units/Store Manager.png" title="Store Manager"/></div>
+		<div class="unit"><img src="units/Sweet Breaker.png" title="Sweet Breaker"/></div>
+		<div class="unit"><img src="units/Syura.png" title="Syura"/></div>
+		<div class="unit"><img src="units/Yuki.png" title="Yuki"/></div>
+		<div class="unit"><img src="units/Cuties Sora Sham.png" title="Cuties (Sora & Sham)"/></div>
+		<div class="blank"><img src="units/blank.png"/></div>
+	</div>
+	<div class="row">
+		<div class="blank"><img src="units/blank.png"/></div>
+		<div class="unit"><img src="units/Suguri (46 Billion Years).png" title="Suguri (46 Billion Years)"/></div>
+		<div class="unit"><img src="units/Suguri.png" title="Suguri"/></div>
+		<div class="unit"><img src="units/Kyousuke.png" title="Kyousuke"/></div>
+		<div class="unit"><img src="units/Mei.png" title="Mei"/></div>
+		<div class="unit"><img src="units/Natsumi.png" title="Natsumi"/></div>
+		<div class="unit"><img src="units/Nico.png" title="Nico"/></div>
+		<div class="unit"><img src="units/Star Breaker.png" title="Star Breaker"/></div>
+		<div class="blank"><img src="units/blank.png"/></div>
+	</div>
+	<div class="row">
+		<div class="blank"><img src="units/blank.png"/></div>
+		<div class="blank"><img src="units/blank.png"/></div>
+		<div class="unit"><img src="units/Shifu Robot.png" title="Shifu Robot"/></div>
+		<div class="unit"><img src="units/Saki.png" title="Saki"/></div>
+		<div class="unit"><img src="units/Chicken.png" title="Chicken"/></div>
+		<div class="unit"><img src="units/Kiriko.png" title="Kiriko"/></div>
+		<div class="unit"><img src="units/Krilalaris.png" title="Krilalaris"/></div>
+		<div class="unit"><img src="units/Sora.png" title="Sora"/></div>
+		<div class="unit"><img src="units/Tsih.png" title="Tsih"/></div>
+		<div class="blank"><img src="units/blank.png"/></div>
+	</div>
+	<div class="row">
+		<div class="unit"><img src="units/Halena.png" title="Halena"/></div>
+		<div class="unit"><img src="units/Sumika.png" title="Sumika"/></div>
+		<div class="unit"><img src="units/Robo Ball Roboball.png" title="Robo Ball"/></div>
+		<div class="unit"><img src="units/NoName Noname.png" title="NoName"/></div>
+		<div class="unit"><img src="units/Aru (Scramble).png" title="Aru (Scramble)"/></div>
+		<div class="unit"><img src="units/Arthur.png" title="Arthur"/></div>
+		<div class="unit"><img src="units/Nath.png" title="Nath"/></div>
+		<div class="unit"><img src="units/Sora (Military).png" title="Sora (Military)"/></div>
+		<div class="blank"><img src="units/blank.png"/></div>
+	</div>
+	<div class="row">
+		<div class="blank"><img src="units/blank.png"/></div>
+		<div class="unit"><img src="units/Maynie.png" title="Maynie"/></div>
+		<div class="unit"><img src="units/Mio.png"/ title="Mio"></div>
+		<div class="unit"><img src="units/Nanako.png" title="Nanako"/></div>
+		<div class="unit"><img src="units/Kyoko.png" title="Kyoko"/></div>
+		<div class="unit"><img src="units/Aru.png" title="Aru"/></div>
+		<div class="unit"><img src="units/Mira.png" title="Mira"/></div>
+		<div class="unit"><img src="units/Sham.png" title="Sham"/></div>
+		<div class="unit"><img src="units/Islay.png" title="Islay"/></div>
+		<div class="blank"><img src="units/blank.png"/></div>
+	</div>
+	<div class="row">
+		<div class="unit"><img src="units/Cook.png" title="Cook"/></div>
+		<div class="unit"><img src="units/Ellie.png" title="Ellie"/></div>
+		<div class="unit"><img src="units/Tomomo.png" title="Tomomo"/></div>
+		<div class="unit"><img src="units/Kae.png" title="Kae"/></div>
+		<div class="unit"><img src="units/Iru.png" title="Iru"/></div>
+		<div class="unit"><img src="units/Alte.png" title="Alte"/></div>
+		<div class="unit"><img src="units/Fernet.png" title="Fernet"/></div>
+		<div class="unit"><img src="units/Sherry.png" title="Sherry"/></div>
+		<div class="unit"><img src="units/Tequilla.png" title="Tequilla"/></div>
+	</div>
+	<div class="row">
+		<div class="blank"><img src="units/blank.png"/></div>
+		<div class="unit"><img src="units/Arnelle.png" title="Arnelle"/></div>
+		<div class="unit"><img src="units/Tomomo (Casual) Tomomo (Sweet Eater).png" title="Tomomo (Casual)"/></div>
+		<div class="unit"><img src="units/Marie Poppo.png" title="Marie Poppo"/></div>
+		<div class="unit"><img src="units/Hime.png" title="Hime"/></div>
+		<div class="ui"><img src="units/Random.png"/></div>
+		<div class="unit"><img src="units/Marc.png" title="Marc"/></div>
+		<div class="unit"><img src="units/Peat Pete.png" title="Peat"/></div>
+		<div class="unit"><img src="units/Seagull.png" title="Seagull"/></div>
+		<div class="blank"><img src="units/blank.png"/></div>
+	</div>
+	<div class="row">
+		<div class="blank"><img src="units/blank.png"/></div>
+		<div class="unit"><img src="units/Lulu.png" title="Lulu"/></div>
+		<div class="unit"><img src="units/Marie Poppo (Mixed).png" title="Marie Poppo (Mixed)"/></div>
+		<div class="unit"><img src="units/Kai.png" title="Kai"/></div>
+		<div class="ui"><img src="units/Gear.png"/></div>
+		<div class="ui"><img src="units/Return.png"/></div>
+		<div class="unit"><img src="units/Marc (Pilot).png" title="Marc (Pilot)"/></div>
+		<div class="unit"><img src="units/Flying Castle.png" title="Flying Castle"/></div>
+		<div class="blank"><img src="units/blank.png"/></div>
+	</div>
+</div>
+<script src="jquery-3.6.0.min.js"></script>
+<script>
+$(document).ready(function()  {
+	$("#search").keyup( function () {
+		var filter = 0;
+		$(".unit").children('img').map(function() {
+			var searchable = $(this).attr('src').slice(6, -4).toLowerCase(); // chop "units/" and ".png" off
+			if (searchable.indexOf( $("#search").val().toLowerCase()) < 0) {
+				$(this).parent().addClass("noMatch");
+				filter = filter + 1;
+			} else {
+				$(this).parent().removeClass("noMatch");
+			}
+		});
+		// grey out gear/random/goback buttons separately, so they are not included in the search
+		if (filter > 0) {
+			$(".ui").addClass("noMatch");
+		} else {
+			$(".ui").removeClass("noMatch");
+		}
+	});
+});
+</script>
+</body>
+</html>
