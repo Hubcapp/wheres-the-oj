@@ -90,7 +90,7 @@
 		<div class="unit"><img src="units/QP (Dangerous).png" title="QP (Dangerous)"/></div>
 		<div class="unit"><img src="units/Tomato Mimyuu.png" title="Tomato & Mimyuu"/></div>
 		<div class="unit"><img src="units/Ceoreparque.png" title="Ceoreparque"/></div>
-		<div class="unit"><img src="units/Miyusaki.png" title="Miyusaki"/></div>
+		<div class="unit"><img src="units/Miusaki.png" title="Miusaki"/></div>
 		<div class="unit"><img src="units/Yuki (Dangerous).png" title="Yuki (Dangerous)"/></div>
 		<div class="unit"><img src="units/Yuuki.png" title="Yuuki"/></div>
 		<div class="blank"><img src="units/blank.png"/></div>
@@ -101,7 +101,7 @@
 		<div class="unit"><img src="units/Suguri (Ver.2).png" title="Suguri (Ver.2)"/></div>
 		<div class="unit"><img src="units/QP.png" title="QP"/></div>
 		<div class="unit"><img src="units/Store Manager.png" title="Store Manager"/></div>
-		<div class="unit"><img src="units/Sweet Breaker.png" title="Sweet Breaker"/></div>
+		<div class="unit"><img src="units/Sweet Breaker Amami.png" title="Sweet Breaker"/></div>
 		<div class="unit"><img src="units/Syura.png" title="Syura"/></div>
 		<div class="unit"><img src="units/Yuki.png" title="Yuki"/></div>
 		<div class="unit"><img src="units/Cuties Sora Sham.png" title="Cuties (Sora & Sham)"/></div>
@@ -115,7 +115,7 @@
 		<div class="unit"><img src="units/Mei.png" title="Mei"/></div>
 		<div class="unit"><img src="units/Natsumi.png" title="Natsumi"/></div>
 		<div class="unit"><img src="units/Nico.png" title="Nico"/></div>
-		<div class="unit"><img src="units/Star Breaker.png" title="Star Breaker"/></div>
+		<div class="unit"><img src="units/Star Breaker Starbo Reika.png" title="Star Breaker"/></div>
 		<div class="blank"><img src="units/blank.png"/></div>
 	</div>
 	<div class="row">
@@ -170,10 +170,10 @@
 		<div class="unit"><img src="units/Tomomo (Casual) Tomomo (Sweet Eater).png" title="Tomomo (Casual)"/></div>
 		<div class="unit"><img src="units/Marie Poppo.png" title="Marie Poppo"/></div>
 		<div class="unit"><img src="units/Hime.png" title="Hime"/></div>
-		<div class="ui"><img src="units/Random.png"/></div>
+		<div class="ui random"><img src="units/Random.png"/></div>
 		<div class="unit"><img src="units/Marc.png" title="Marc"/></div>
 		<div class="unit"><img src="units/Peat Pete.png" title="Peat"/></div>
-		<div class="unit"><img src="units/Seagull.png" title="Seagull"/></div>
+		<div class="unit"><img src="units/Seagull Johnathan.png" title="Seagull"/></div>
 		<div class="blank"><img src="units/blank.png"/></div>
 	</div>
 	<div class="row">
@@ -193,6 +193,7 @@
 $(document).ready(function()  {
 	$("#search").keyup( function () {
 		var filter = 0;
+		var matchFound = 0;
 		$(".unit").children('img').map(function() {
 			var searchable = $(this).attr('src').slice(6, -4).toLowerCase(); // chop "units/" and ".png" off
 			if (searchable.indexOf( $("#search").val().toLowerCase()) < 0) {
@@ -200,6 +201,7 @@ $(document).ready(function()  {
 				filter = filter + 1;
 			} else {
 				$(this).parent().removeClass("noMatch");
+				matchFound = matchFound + 1;
 			}
 		});
 		// grey out gear/random/goback buttons separately, so they are not included in the search
@@ -207,6 +209,10 @@ $(document).ready(function()  {
 			$(".ui").addClass("noMatch");
 		} else {
 			$(".ui").removeClass("noMatch");
+		}
+		// special request from tango that the random tile be searchable
+		if (matchFound == 0 && $("#search").val().indexOf("?") > -1) {
+			$(".random").removeClass("noMatch");
 		}
 	});
 });
