@@ -109,7 +109,7 @@
 	</div>
 	<div class="row">
 		<div class="blank"><img src="units/blank.png"/></div>
-		<div class="unit"><img src="units/Suguri (46 Billion Years).png" title="Suguri (46 Billion Years)"/></div>
+		<div class="unit"><img src="units/Suguri (46 Billion Years) Suguri Boomer.png" title="Suguri (46 Billion Years)"/></div>
 		<div class="unit"><img src="units/Suguri.png" title="Suguri"/></div>
 		<div class="unit"><img src="units/Kyousuke.png" title="Kyousuke"/></div>
 		<div class="unit"><img src="units/Mei.png" title="Mei"/></div>
@@ -123,7 +123,7 @@
 		<div class="blank"><img src="units/blank.png"/></div>
 		<div class="unit"><img src="units/Shifu Robot.png" title="Shifu Robot"/></div>
 		<div class="unit"><img src="units/Saki.png" title="Saki"/></div>
-		<div class="unit"><img src="units/Chicken.png" title="Chicken"/></div>
+		<div class="unit"><img src="units/Chicken Haruo.png" title="Chicken"/></div>
 		<div class="unit"><img src="units/Kiriko.png" title="Kiriko"/></div>
 		<div class="unit"><img src="units/Krilalaris.png" title="Krilalaris"/></div>
 		<div class="unit"><img src="units/Sora.png" title="Sora"/></div>
@@ -154,7 +154,7 @@
 		<div class="blank"><img src="units/blank.png"/></div>
 	</div>
 	<div class="row">
-		<div class="unit"><img src="units/Cook.png" title="Cook"/></div>
+		<div class="unit"><img src="units/Cook Chicken.png" title="Cook"/></div>
 		<div class="unit"><img src="units/Ellie.png" title="Ellie"/></div>
 		<div class="unit"><img src="units/Tomomo.png" title="Tomomo"/></div>
 		<div class="unit"><img src="units/Kae.png" title="Kae"/></div>
@@ -173,7 +173,7 @@
 		<div class="ui random"><img src="units/Random.png"/></div>
 		<div class="unit"><img src="units/Marc.png" title="Marc"/></div>
 		<div class="unit"><img src="units/Peat Pete.png" title="Peat"/></div>
-		<div class="unit"><img src="units/Seagull Johnathan.png" title="Seagull"/></div>
+		<div class="unit"><img src="units/Seagull Jonathan Johnathan.png" title="Seagull"/></div>
 		<div class="blank"><img src="units/blank.png"/></div>
 	</div>
 	<div class="row">
@@ -190,18 +190,18 @@
 </div>
 <script src="jquery-3.6.0.min.js"></script>
 <script>
-$(document).ready(function()  {
-	$("#search").keyup( function () {
+$(document).ready(function() {
+	$("#search").keyup(function() {
 		var filter = 0;
 		var matchFound = 0;
 		$(".unit").children('img').map(function() {
 			var searchable = $(this).attr('src').slice(6, -4).toLowerCase(); // chop "units/" and ".png" off
-			if (searchable.indexOf( $("#search").val().toLowerCase()) < 0) {
+			if (searchable.indexOf($("#search").val().toLowerCase()) < 0) {
 				$(this).parent().addClass("noMatch");
-				filter = filter + 1;
+				filter += 1;
 			} else {
 				$(this).parent().removeClass("noMatch");
-				matchFound = matchFound + 1;
+				matchFound += 1;
 			}
 		});
 		// grey out gear/random/goback buttons separately, so they are not included in the search
