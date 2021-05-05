@@ -16,9 +16,9 @@
 		vertical-align: middle;
 		min-width: 1400px;
 	}
-	h1 {
-		color: orange;
-		font-family: Arial;
+	#title {
+		margin-bottom: 15px;
+		width: 800px;
 	}
 	.unit, .blank, .ui {
 		display: inline;
@@ -29,7 +29,7 @@
 	.row {
 		margin-top:-50px;
 	}
-	.noMatch {
+	.noMatch, .blank {
 	    opacity: 0.25;
 		filter: alpha(opacity=25); /* msie */
 	}
@@ -67,7 +67,7 @@
 </head>
 <body>
 <div id="characterSelectionScreen">
-	<h1>Where's my Orange Juice??</h1>
+	<img id="title" src="wheres-the-orange-juice.png" alt="Where's the Orange Juice??"/>
 	<div id="searchbox">
 		<img src="orange.png" class="searchIconImage">
 		<input autocomplete="off" id="search" spellcheck="false" placeholder="Character Name...">
@@ -210,7 +210,7 @@ $(document).ready(function() {
 		} else {
 			$(".ui").removeClass("noMatch");
 		}
-		// special request from tango that the random tile be searchable
+		// special request from Tango that the random tile be searchable
 		if (matchFound == 0 && $("#search").val().indexOf("?") > -1) {
 			$(".random").removeClass("noMatch");
 		}
